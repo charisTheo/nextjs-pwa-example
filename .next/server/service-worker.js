@@ -1,8 +1,8 @@
-importScripts("precache-manifest.ecc6564152ab308e1fae758b0608796c.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
+importScripts("precache-manifest.801f0392b928c77961aae50696006494.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 const OFFLINE_PAGE_URL = 'offline.html';
 
-workbox.precaching.precacheAndRoute([...self.__precacheManifest, '/', OFFLINE_PAGE_URL]);
+workbox.precaching.precacheAndRoute(['/', OFFLINE_PAGE_URL].concat(self.__precacheManifest || []));
 
 // addEventListener('install', event => {
 //   const cacheName = workbox && workbox.core.cacheNames.runtime;

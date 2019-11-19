@@ -13,6 +13,10 @@ module.exports = {
     config.plugins.push(
       new InjectManifest({
         swSrc: 'service-worker.js',
+        exclude: [
+          'react-loadable-manifest.json', 
+          'build-manifest.json'
+        ]
       }),
       // new SWPrecacheWebpackPlugin({
       //   verbose: true,

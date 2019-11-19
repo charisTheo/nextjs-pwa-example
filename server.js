@@ -12,7 +12,7 @@ app.prepare().then(() => {
   createServer((req, res) => {
     const parsedUrl = parse(req.url, true)
     const { pathname } = parsedUrl
-    const serviceWorkerStaticFiles =  ['service-worker.js', 'precache-manifest', 'offline.html'];
+    const serviceWorkerStaticFiles =  ['service-worker.js', 'precache-manifest', 'offline.html', '(^\/static)'];
     const regExp = new RegExp(`(${serviceWorkerStaticFiles.join('|')})`);
 
     // ! need to redirect the request to the statically hosted files

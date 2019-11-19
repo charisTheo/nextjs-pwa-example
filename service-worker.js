@@ -1,6 +1,6 @@
 const OFFLINE_PAGE_URL = 'offline.html';
 
-workbox.precaching.precacheAndRoute([...self.__precacheManifest, '/', OFFLINE_PAGE_URL]);
+workbox.precaching.precacheAndRoute(['/', OFFLINE_PAGE_URL].concat(self.__precacheManifest || []));
 
 // addEventListener('install', event => {
 //   const cacheName = workbox && workbox.core.cacheNames.runtime;
